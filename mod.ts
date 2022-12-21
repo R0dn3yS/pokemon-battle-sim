@@ -7,5 +7,5 @@ const ev = new EV([ 74, 190, 91, 48, 84, 23 ]);
 const garchomp = new Garchomp(iv, ev, 78);
 
 console.log(garchomp);
-console.log(`The attack '${garchomp.moveset.moves[0].name}' does ${garchomp.attack(0, garchomp)} damage on itself.`)
+console.log(`The attack '${garchomp.moveset.moves[1].name}' does ${garchomp.attack(1, garchomp)} damage on itself.`)
 
