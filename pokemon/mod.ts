@@ -8,6 +8,8 @@ export class Pokemon {
   primaryType: Type;
   secondaryType: Type;
   stats: Stats;
+  iv: IV;
+  ev: EV;
   level: number;
   moveset: Moveset;
 
@@ -16,6 +18,8 @@ export class Pokemon {
     this.primaryType = new Type(primaryType);
     this.secondaryType = new Type(secondaryType);
     this.stats = new Stats(base, iv, ev, level);
+    this.iv = iv;
+    this.ev = ev;
     this.level = level;
     this.moveset = moveset;
   }
