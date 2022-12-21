@@ -24,7 +24,7 @@ export class Pokemon {
     this.moveset = moveset;
   }
 
-  attack(moveIndex: number, defendingPokemon: Pokemon): number | string | undefined {
+  attack(moveIndex: number, defendingPokemon: Pokemon): number | undefined {
     if (this.moveset.moves[moveIndex].name === 'None') return;
 
     const move = this.moveset.moves[moveIndex];
@@ -45,7 +45,7 @@ export class Pokemon {
     if (Math.random() * 100 < move.accuracy) {
       return Math.floor(((((((2 * this.level) / 5) + 2) * move.power * atkStat / defStat) / 50) + 2) * critical * random * stab * typeEff);
     } else {
-      return 'The attack has missed.';
+      return 0;
     }
   }
 }
