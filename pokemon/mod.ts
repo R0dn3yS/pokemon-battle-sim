@@ -43,7 +43,7 @@ export class Pokemon {
 
 
     if (Math.random() * 100 < move.accuracy) {
-      return Math.floor(((((((2 * this.level) / 5) + 2) * move.power * atkStat / defStat) / 50) + 2) * critical * random * stab * typeEff);
+      return Math.floor(((((((2 * this.level) / 5) + 2) * move.power * (atkStat / defStat)) / 50) + 2) * critical * random * stab * typeEff);
     } else {
       return 0;
     }

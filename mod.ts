@@ -1,11 +1,14 @@
+import { Battle } from './battle/mod.ts';
 import { Garchomp } from './pokemon/species/garchomp.ts';
+import { Zacian } from "./pokemon/species/zacian.ts";
 import { IV, EV } from './stats/mod.ts';
 
-const iv = new IV([ 24, 12, 30, 16, 23, 5 ]);
-const ev = new EV([ 74, 190, 91, 48, 84, 23 ]);
+const iv = new IV([ 31, 31, 31, 31, 31, 31 ]);
+const ev = new EV([ 236, 4, 4, 0, 12, 252 ]);
 
-const garchomp = new Garchomp(iv, ev, 78);
+const zacian = new Zacian(iv, ev, 50);
 
-console.log(garchomp);
-console.log(`The attack '${garchomp.moveset.moves[2].name}' does ${garchomp.attack(2, garchomp)} damage on itself.`)
+const battle = new Battle(zacian, zacian);
 
+console.log(zacian);
+console.log(zacian.attack(0, zacian));
